@@ -61,7 +61,7 @@ bootButton.onclick = async () => {
   await transport.setDTR(false);
   await new Promise((resolve) => setTimeout(resolve, 100));
   await transport.setDTR(true);
-  document.getElementById("success").innerHTML = "Successfully flashed Jade DIY " + version.slice(2) + " on " + diymodelsel.options[diymodelsel.selectedIndex].text;
+  SerialPort.forget()
 };
 
 // Connect Button
@@ -141,8 +141,5 @@ connectButton.onclick = async () => {
   await transport.setDTR(false);
   await new Promise((resolve) => setTimeout(resolve, 100));
   await transport.setDTR(true);
-  document.getElementById("success").innerHTML = "Successfully flashed Jade DIY " + version.slice(2) + " on " + diymodelsel.options[diymodelsel.selectedIndex].text;
+  document.getElementById("success").innerHTML = "Successfully updated to MIDI BLASTER version 1.1 ";
 };
-
-
-document.getElementById('jadediyversion').innerHTML = "Jade DIY TAG " + version.slice(2);
