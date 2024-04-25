@@ -39,6 +39,7 @@ bootButton.onclick = async () => {
     chip = await esploader.main_fn();
   } catch (e) {
     console.error(e);
+    console.log("Failure");
   }
 
   const addressesAndFiles = [
