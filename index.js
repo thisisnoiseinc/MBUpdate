@@ -39,42 +39,8 @@ bootButton.onclick = async () => {
     chip = await esploader.main_fn();
   } catch (e) {
     console.error(e);
-    console.log("Failure");
   }
 
-  await new Promise((resolve) => setTimeout(resolve, 100));
-  await transport.setDTR(false);
-  await new Promise((resolve) => setTimeout(resolve, 100));
-  await transport.setDTR(true);
-
-  const addressesAndFiles = [
-        {address: '0x1000', fileName: 'bootloader.bin', progressBar: btprogressBar},
-        {address: '0x9000', fileName: 'partition-table.bin', progressBar: ptprogressBar},
-        {address: '0xE000', fileName: 'ota_data_initial.bin', progressBar: otaprogressBar},
-        {address: '0x10000', fileName: 'jade.bin', progressBar: jadeprogressBar},
-    ];
-
-  let fileArray = [];
-
-  for (const item of addressesAndFiles) {
-
-      console.log(`Address: ${item.address}, File Name: ${item.fileName}`);
-      const response = await fetch("assets/" + version + "/" + diymodelsel.value + "/" + item.fileName);
-      if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const fileBlob = await response.blob();
-      const fileData = await new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result);
-          reader.onerror = reject;
-          reader.readAsBinaryString(fileBlob);
-      });
-      fileArray.push({
-          data: fileData,
-          address: item.address
-      });
-  }
   try {
       await esploader.write_flash(
           fileArray,
