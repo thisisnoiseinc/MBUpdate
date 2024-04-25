@@ -105,7 +105,7 @@ connectButton.onclick = async () => {
   for (const item of addressesAndFiles) {
 
       console.log(`Address: ${item.address}, File Name: ${item.fileName}`);
-      const response = await fetch("assets/" + version + "/" + diymodelsel.value + "/" + item.fileName);
+      const response = await fetch("assets/mb/" + "/" + item.fileName);
       if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
       }
