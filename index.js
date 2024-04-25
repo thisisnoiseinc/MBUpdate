@@ -94,10 +94,10 @@ connectButton.onclick = async () => {
   }
 
   const addressesAndFiles = [
-        {address: '0x1000', fileName: 'bootloader.bin', progressBar: btprogressBar},
-        {address: '0x9000', fileName: 'partition-table.bin', progressBar: ptprogressBar},
-        {address: '0xE000', fileName: 'ota_data_initial.bin', progressBar: otaprogressBar},
-        {address: '0x10000', fileName: 'jade.bin', progressBar: jadeprogressBar},
+        {address: '0x1000', fileName: 'MBWebApp.ino.bootloader.bin', progressBar: btprogressBar},
+        {address: '0x8000', fileName: 'MBWebApp.ino.partitions.bin', progressBar: ptprogressBar},
+        {address: '0xe000', fileName: 'boot_app0.bin', progressBar: otaprogressBar},
+        {address: '0x10000', fileName: 'MBWebApp.ino.bin', progressBar: jadeprogressBar},
     ];
 
   let fileArray = [];
