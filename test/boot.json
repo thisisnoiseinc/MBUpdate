@@ -2,7 +2,7 @@
   "name": "Update 1.1",
   "builds": [
     {
-      "chipFamily": "ESP32",
+      "chipFamily": "ESP32-S2",
       "parts": [
         { "path": "MBWebApp.ino.bootloader.bin", "offset": 4096 },
         { "path": "MBWebApp.ino.partitions.bin", "offset": 32768 },
