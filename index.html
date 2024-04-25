@@ -14,6 +14,12 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
          <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
+
+         <style>
+        body {
+          background-color:#000000; color: "white";
+        }
+         </style>
     </head>
     <body>
         <h1 align="center"><p>MIDI BLASTER Updating Tool</p></h1>
@@ -25,7 +31,7 @@
             <hr/>
             <div id="program">
                 <h3>MIDI BLASTER Version 1.1</h3>
-                <input class="btn btn-info btn-sm" type="button" id="bootButton" value="Boot" />
+                <input class="btn btn-info btn-sm" type="button" id="bootButton" value="Enter Boot Mode" />
                 <br>
                 <br>
                 <esp-web-install-button manifest="test/boot.json"></esp-web-install-button>
@@ -41,6 +47,13 @@
                document.getElementById("safariErr").style.display = "inline";
                document.getElementById("main").style.display = "none";
             }
+
+            document.addEventListener("DOMContentLoaded", function() {
+            // Select the button element
+            var buttons = document.querySelectorAll('esp-web-install-button');
+            buttons.shadowRoot.querySelector('button').innerText = "Install Version 1.1";
+            buttons.shadowRoot.querySelector('button').style.backgroundColor = "green";
+        });
         </script>
     </body>
 </html>
