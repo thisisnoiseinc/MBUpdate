@@ -4,9 +4,9 @@
     {
       "chipFamily": "ESP32-S2",
       "parts": [
-        { "path": "MBWebApp.ino.bootloader.bin", "offset": 4096 },
-        { "path": "MBWebApp.ino.partitions.bin", "offset": 32768 },
-        { "path": "MBWebApp.ino.bin", "offset": 65536 }
+        { "path": "MB1-1.ino.bootloader.bin", "offset": 4096 },
+        { "path": "MB1-1.ino.partitions.bin", "offset": 32768 },
+        { "path": "MB1-1.ino.bin", "offset": 65536 }
       ]
     }
   ]
