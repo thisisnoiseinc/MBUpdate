@@ -82,10 +82,6 @@ connectButton.onclick = async () => {
 
   var baudrate = 921600;
 
-  if (diymodelsel.value == "m5stickcplus") {
-      baudrate = 115200;
-  }
-
   try {
     esploader = new ESPLoader(transport, baudrate, null);
     chip = await esploader.main_fn();
