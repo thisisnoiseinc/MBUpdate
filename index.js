@@ -67,13 +67,8 @@ bootButton.onclick = async () => {
 // Connect Button
 
 connectButton.onclick = async () => {
-  connectButton.style.display = 'none';
-  lbldiymodels.style.display = 'none';
-  diymodelsel.style.display = 'none';
-  if (device === null) {
-    device = await navigator.serial.requestPort({});
-    transport = new Transport(device);
-  }
+  device = await navigator.serial.requestPort({});
+  transport = new Transport(device);
 
   btprogressBar.style.display = 'block';
   otaprogressBar.style.display = 'block';
