@@ -1,0 +1,13 @@
+{
+  "name": "Update 1.1",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "MBWebApp.ino.bootloader.bin", "offset": 4096 },
+        { "path": "MBWebApp.ino.partitions.bin", "offset": 32768 },
+        { "path": "MBWebApp.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
