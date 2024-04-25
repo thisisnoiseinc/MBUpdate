@@ -19,8 +19,6 @@ let transport;
 let chip = null;
 let esploader;
 
-const version = "fw0.1.48";
-
 // Boot Button
 
 bootButton.onclick = async () => {
