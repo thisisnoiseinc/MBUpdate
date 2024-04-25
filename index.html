@@ -54,8 +54,8 @@
             document.addEventListener("DOMContentLoaded", function() {
             // Select the button element
             var buttons = document.querySelectorAll('esp-web-install-button');
-            buttons.shadowRoot.querySelector('button').innerText = "Install Version 1.1";
-            buttons.shadowRoot.querySelector('button').style.backgroundColor = "green";
+            buttons[0].shadowRoot.querySelector('button').innerText = "Install Version 1.1";
+            buttons[0].shadowRoot.querySelector('button').style.backgroundColor = "green";
         });
         </script>
     </body>
