@@ -42,6 +42,11 @@ bootButton.onclick = async () => {
     console.log("Failure");
   }
 
+  await new Promise((resolve) => setTimeout(resolve, 100));
+  await transport.setDTR(false);
+  await new Promise((resolve) => setTimeout(resolve, 100));
+  await transport.setDTR(true);
+
   const addressesAndFiles = [
         {address: '0x1000', fileName: 'bootloader.bin', progressBar: btprogressBar},
         {address: '0x9000', fileName: 'partition-table.bin', progressBar: ptprogressBar},
