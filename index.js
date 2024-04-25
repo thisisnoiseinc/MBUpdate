@@ -61,7 +61,6 @@ bootButton.onclick = async () => {
   await transport.setDTR(false);
   await new Promise((resolve) => setTimeout(resolve, 100));
   await transport.setDTR(true);
-  device.forget()
 };
 
 // Connect Button
