@@ -67,10 +67,9 @@ bootButton.onclick = async () => {
 // Connect Button
 
 connectButton.onclick = async () => {
-  if (device === null) {
+  
   device = await navigator.serial.requestPort({});
   transport = new Transport(device);
-  }
 
   btprogressBar.style.display = 'block';
   otaprogressBar.style.display = 'block';
@@ -143,5 +142,5 @@ connectButton.onclick = async () => {
   await transport.setDTR(false);
   await new Promise((resolve) => setTimeout(resolve, 100));
   await transport.setDTR(true);
-  document.getElementById("success").innerHTML = "Successfully updated to MIDI BLASTER version 1.1 ";
+  document.getElementById("success").innerHTML = "Successfully updated to MIDI BLASTER Version 1.1 ";
 };
