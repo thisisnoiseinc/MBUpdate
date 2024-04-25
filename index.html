@@ -13,6 +13,7 @@
          <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+         <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
     </head>
     <body>
         <h1 align="center"><p>MIDI BLASTER Updating Tool</p></h1>
@@ -26,18 +27,10 @@
                 <h3>MIDI BLASTER Version 1.1</h3>
                 <input class="btn btn-info btn-sm" type="button" id="bootButton" value="Boot" />
                 <br>
-                <input class="btn btn-info btn-sm" type="button" id="connectButton" value="Install" />
+                <br>
+                <esp-web-install-button manifest="test/boot.json"></esp-web-install-button>
                 <hr/>
             </div>
-            <label for="bootloaderprogress" id="bootloaderprogresslbl" style="display:none;" >Bootloader</label>
-            <progress id="bootloaderprogress" value="0" max="100" style="width: 100%; display:none"></progress>
-            <label for="partitiontableprogress" id="partitiontableprogresslbl" style="display:none;">Partition Table</label>
-            <progress id="partitiontableprogress" value="0" max="100" style="width: 100%; display:none"></progress>
-            <label for="otaprogress" id="otaprogresslbl" style="display:none;">OTA initial data</label>
-            <progress id="otaprogress" value="0" max="100" style="width: 100%; display:none"></progress>
-            <label for="jadeprogress" id="jadeprogresslbl" style="display:none;">Jade firmware</label>
-            <progress id="jadeprogress" value="0" max="100" style="width: 100%; display:none"></progress>
-            <h3 id="success"></h3>
         <script src="index.js" type="module"></script>
         <script>
             // Safari 3.0+ "[object HTMLElementConstructor]"
