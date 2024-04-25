@@ -1,4 +1,3 @@
-const diymodelsel = document.getElementById('diymodelsel');
 const connectButton = document.getElementById('connectButton');
 const bootButton = document.getElementById('bootButton');
 const btprogressBar = document.getElementById('bootloaderprogress');
@@ -9,7 +8,6 @@ const ptprogressBar = document.getElementById('partitiontableprogress');
 const ptprogressBarLbl = document.getElementById('partitiontableprogresslbl');
 const jadeprogressBar = document.getElementById('jadeprogress');
 const jadeprogressBarLbl = document.getElementById('jadeprogresslbl');
-const lbldiymodels = document.getElementById('lbldiymodels');
 
 // import { Transport } from './cp210x-webusb.js'
 import * as esptooljs from "./bundle.js";
