@@ -1,0 +1,13 @@
+{
+  "name": "Update 1.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32-S2",
+      "parts": [
+        { "path": "MB1-0.ino.bootloader.bin", "offset": 4096 },
+        { "path": "MB1-0.ino.partitions.bin", "offset": 32768 },
+        { "path": "MB1-0.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
