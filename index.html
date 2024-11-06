@@ -45,6 +45,7 @@
                 <br>
                 <br>
                 <esp-web-install-button manifest="test/boot.json"></esp-web-install-button>
+                <esp-web-install-button manifest="fallback/boot.json"></esp-web-install-button>
                 <hr/>
                 <h3>What's New ✨</h3>
                 <br>
@@ -71,6 +72,8 @@
             var buttons = document.querySelectorAll('esp-web-install-button');
             buttons[0].shadowRoot.querySelector('button').innerText = "Install Version 1.1";
             buttons[0].shadowRoot.querySelector('button').style.backgroundColor = "green";
+            buttons[1].shadowRoot.querySelector('button').innerText = "Fallback to Version 1.0";
+            buttons[1].shadowRoot.querySelector('button').style.backgroundColor = "red";
         });
         </script>
     </body>
